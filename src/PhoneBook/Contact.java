@@ -10,7 +10,7 @@ public class Contact {
 
     public Contact() {}
 
-    public Contact(String newName, String newPhone, String newEmail) {
+    public Contact (String newName, String newPhone, String newEmail) {
         name = newName;
         phone = newPhone;
         email = newEmail;
