@@ -1,8 +1,5 @@
 package PhoneBook;
 
-/**
- * Created by Kola on 14.04.15.
- */
 public class Contact {
     String name;
     String phone;
