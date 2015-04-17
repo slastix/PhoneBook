@@ -55,7 +55,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         String deleted = scan.next();
         for (int i = 0; i < book.size(); i++) {
-            if (deleted.equals(book.get(i).name)) {
+            if (deleted.equals(book.get(i).getName())) {
                 book.remove(i);
                 System.out.println("Контакт " + deleted + " удален");
             }
@@ -65,7 +65,7 @@ public class Main {
     public void printContacts () {
         // Вывод всех контактов
         for (int i = 0; i < book.size(); i++) {
-            System.out.println(book.get(i).name + " " + book.get(i).phone + " " + book.get(i).email);
+            System.out.println(book.get(i).getName() + " " + book.get(i).getPhone() + " " + book.get(i).getEmail());
         }
     }
     public void searchContact () {
@@ -73,8 +73,8 @@ public class Main {
         Scanner scan = new Scanner (System.in);
         String searched = scan.next();
         for (int i = 0; i < book.size(); i++) {
-            if (searched.equals(book.get(i).name)) {
-                System.out.println(book.get(i).name + " " + book.get(i).phone + " " + book.get(i).email);
+            if (searched.equals(book.get(i).getName())) {
+                System.out.println(book.get(i).getName() + " " + book.get(i).getPhone() + " " + book.get(i).getEmail());
             }
         }
     }
@@ -83,14 +83,14 @@ public class Main {
         Scanner scan = new Scanner (System.in);
         String searched = scan.next();
         for (int i = 0; i < book.size(); i++) {
-            if (searched.equals(book.get(i).name)) {
-                System.out.println(book.get(i).name + " " + book.get(i).phone + " " + book.get(i).email);
+            if (searched.equals(book.get(i).getName())) {
+                System.out.println(book.get(i).getName() + " " + book.get(i).getPhone() + " " + book.get(i).getEmail());
                 System.out.println("Введите новое имя:");
-                book.get(i).name = scan.next();
+                book.get(i).setName(scan.next());
                 System.out.println("Введите новый номер телефона:");
-                book.get(i).phone = scan.next();
+                book.get(i).setPhone(scan.next());
                 System.out.println("Введите новый E-mail:");
-                book.get(i).email = scan.next();
+                book.get(i).setEmail(scan.next());
                 System.out.println("Данные контакта обновлены");
             }
         }
